@@ -22,3 +22,6 @@ Couple of requirements at start:
   * Java
   * Python
   * Go
+
+NOTICE: This project is heavily inspired by SIGAR - System Information Gatherer and Reporter, originally created by VMware but now abandoned.
+One of the goals of this project is to have similar but separate functionality.
