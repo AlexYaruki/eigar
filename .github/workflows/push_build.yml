@@ -1,17 +1,10 @@
 name: main
 on: [push]
 jobs:
-  build_and_test__ubuntu_18_04:
+  build_and_test:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - run: sudo apt-get update && sudo apt-get install -yqq wget build-essential cmake
       - run: mkdir build && cd build && cmake .. && make
-      - run: cd build && ctest
-  build_and_test__ubuntu_20_04:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v2
-      - run: sudo apt-get update && sudo apt-get install -yqq wget build-essential cmake
-      - run: mkdir build && cd build && cmake .. && make
-      - run: cd build && ctest
+      - run: cd build && ctest --verbose
